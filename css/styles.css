@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;700&display=swap');
+
+*{
+    font-family: 'Nunito', sans-serif;
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all .5s linear;
+}
+
+.container{
+    background-image: linear-gradient(to top, #00c6fb 0%, #005bea 100%);
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.container .wabe{
+    position: absolute;
+    bottom: 0;
+}
+
+.container .text-container{
+    flex-basis: 60%;
+    padding-left: 3rem;
+    overflow: hidden;
+    color: white;
+
+    animation: start ease-in 1.5s alternate;
+}
+
+.container .text-container .title{
+    font-size: 5rem;
+    text-transform: uppercase;    
+}
+
+.container .text-container .sub-title{
+    font-size: 2rem;   
+    font-weight: normal;
+    margin: 2rem 0;
+}
+
+.container .text-container .btn{
+    display: inline-block; 
+    padding: 1rem 0;
+    text-align: center; 
+    font-weight: 600;
+    color: #ff70b0;  
+    background: white; 
+    font-size: 1.5rem;
+    height: 4rem;
+    width: 9rem;
+    border-radius: .5rem;
+    text-decoration: none;
+
+    transition: .3s;
+}
+
+.container .text-container .btn:hover{
+    background: #a2c609;
+    color: white;
+}
+
+.container .img-container{
+    flex-basis: 40%;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    overflow: hidden;
+
+    animation: start ease-in 1s alternate;
+}
+
+.container .img-container .img-payment{
+    width: 90%;
+
+    animation: img-payment ease-in 1s infinite alternate; 
+}
+
+@keyframes img-payment{
+    0%{
+        transform: scale(1);
+    }100%{
+        transform: scale(1.04);
+    }
+}
+
+@keyframes start{
+    0%{
+        transform: translate(-50rem);
+    }100%{
+        transform: translate(0);
+    }
+}
+
+@media screen and (max-width: 1360px){
+
+    .container .text-container .title{
+        font-size: 3rem;
+    }
+
+    .container .text-container .sub-title{
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 1000px){
+
+    .container{
+        flex-direction: column-reverse;
+    }
+
+    .container .text-container{
+        margin: 0 2rem;
+        display: flex;
+        flex-direction: initial;
+        padding-left: 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-basis: 40%;
+        text-align: center;
+
+        padding-bottom: 5rem;
+
+        animation: start ease-in 1s alternate;
+    }
+    
+    .container .img-container{
+        flex-basis: 60%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;   
+        
+        padding-bottom: 5rem;
+    }
+
+}
